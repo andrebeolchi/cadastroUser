@@ -11,7 +11,7 @@ import br.com.fiap.model.Setup;
 
 public class SetupDao {
 	
-	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("progamer-persistence-unit");
+	private EntityManagerFactory factory = Persistence.createEntityManagerFactory("user-persistence-unit");
 	private EntityManager manager = factory.createEntityManager();
 
 	public void create(Setup setup) {
