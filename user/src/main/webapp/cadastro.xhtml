@@ -27,14 +27,24 @@
 
 					<div class="p-field">
 						<label for="birthDate">Birth Date</label>
-						<p:inputText id="birthDate" type="text"
-							value="#{setupBean.setup.birthDate}" />
+						<p:datePicker id="navigator" value="#{setupBean.setup.birthDate}"
+							monthNavigator="true" yearNavigator="true" showWeek="true" pattern="dd/MM/yyyy" />
 					</div>
 
-					<div class="p-field">
+					<div class="p-field p-grid">
 						<label for="password">Password</label>
-						<p:inputText id="password" type="text"
-							value="#{setupBean.setup.password}" />
+						<div class="p-col">
+							<p:password id="pwd1" value="#{setupBean.setup.password}"
+								match="pwd2" label="Password 1" required="true" />
+						</div>
+					</div>
+
+					<div class="p-field p-grid">
+						<label for="password">Confirm Password</label>
+						<div class="p-col">
+							<p:password id="pwd2" value="#{setupBean.setup.password}"
+								label="Password 2" required="true" />
+						</div>
 					</div>
 				</div>
 

@@ -1,5 +1,7 @@
 package br.com.fiap.model;
 
+import java.time.LocalDate;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,16 +12,16 @@ public class Setup {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	private String name = "Meu Setup";
-	private String email = "teste@exemplo.com";
-	private String password = "descriÃ§Ã£o do setup";
-	private String birthDate = "10/10/10";
+	private String name;
+	private String email;
+	private String password;
+	private LocalDate birthDate;
 
 	public Setup() {
 		super();
 	}
 	
-	public Setup(String name, String email, String password, String birthDate) {
+	public Setup(String name, String email, String password, LocalDate birthDate) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -67,12 +69,12 @@ public class Setup {
 	}
 
 
-	public String getBirthDate() {
+	public LocalDate getBirthDate() {
 		return birthDate;
 	}
 
 
-	public void setBirthDate(String birthDate) {
+	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
